@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%# 参照：view/layouts/application.html.erb %>
+</head>
+<body>
+  <div class="main">     
+    <div class="contents">
+          <div class="one_box" >
+            <div class="upbox" style="background-image: url(assets/patrol-cut.jpg);">
+            <div class="title">LESSON1<br>
+              救急外傷処置総論
+              </div>
+              <div class="overlay">
+              </div>
+            </div>
+            <div class="downbox">
+              <div class="message_data">
+                <div class="title_box">
+                <%= link_to "フランス革命", page_1_path, class: 'title' %>
+                  <% page =  @page.find_by user_id: current_user, page: 1 %>
+                  <%  if page.nil? %>
+                  <span class="c-btn">未読</span> 
+                  <% else %>
+                    <% if  page.read_log == 100 %> 
+                    <span class="a-btn">理解</span>
+                    <% elsif  page.read_log == 50 %>
+                    <span class="b-btn">読了</span> 
+                    <% else %>
+                    <span class="c-btn">未読</span> 
+                    <% end %>
+
+                  <% end %>
+                </div>
+
+                <div class="title_box">
+                  <%= link_to "ひまわり", page_2_path, class: 'title' %>
+                  <% page =  @page.find_by user_id: current_user, page: 2 %>
+                  <%  if page.nil? %>
+                  <span class="c-btn">未読</span> 
+                  <% else %>
+                    <% if page.read_log == 100 %> 
+                    <span class="a-btn">理解</span>
+                    <% elsif  page.read_log == 50 %>
+                    <span class="b-btn">読了</span> 
+                    <% else %>
+                    <span class="c-btn">未読</span> 
+                    <% end %>
+
+                  <% end %>
+                </div>
+
+                <div class="title_box">
+                  <%= link_to "星夜月", page_3_path, class: 'title' %>
+                  <% page =  @page.find_by user_id: current_user, page: 3 %>
+                  <%  if page.nil? %>
+                  <span class="c-btn">未読</span> 
+                  <% else %>
+                      <% if page.read_log == 100 %> 
+                      <span class="a-btn">理解</span>
+                      <% elsif page.read_log == 50 %>
+                      <span class="b-btn">読了</span> 
+                      <% else %>
+                      <span class="c-btn">未読</span> 
+                      <% end %>
+                  <% end %>
+                </div>
+
+                <div class="title_box">
+                  <%= link_to "GitHub", page_4_path, class: 'title' %>
+                  <% page =  @page.find_by user_id: current_user, page: 4 %>
+                  <%  if page.nil? %>
+                  <span class="c-btn">未読</span> 
+                  <% else %>
+                      <% if page.read_log == 100 %> 
+                      <span class="a-btn">理解</span>
+                      <% elsif page.read_log == 50 %>
+                      <span class="b-btn">読了</span> 
+                      <% else %>
+                      <span class="c-btn">未読</span> 
+                      <% end %>
+                  <% end %>
+                </div>
+
+                <div class="title_box">
+                  <%= link_to "ピカソ", page_5_path, class: 'title' %>
+                  <% page =  @page.find_by user_id: current_user, page: 5 %>
+                  <%  if page.nil? %>
+                  <span class="c-btn">未読</span> 
+                  <% else %>
+                      <% if  page.read_log == 100 %> 
+                      <span class="a-btn">理解</span>
+                      <% elsif  page.read_log == 50 %>
+                      <span class="b-btn">読了</span> 
+                      <% else %>
+                      <span class="c-btn">未読</span> 
+                      <% end %>
+                  <% end %>
+                </div>
+              </div>
+                </div> <%# //downbox// %>
+        </div> <%# //onebox// %>
+
+
+
+          <div class="one_box" >
+            <div class="upbox" style="background-image: url(http://www.jigsaw.jp/img/goods/L/epo7738910568.jpg);">
+            <div class="title">LESSON2<br>
+              テストカリキュラム
+              </div>
+              <div class="overlay">
+              </div>
+            </div>
+            <div class="downbox">
+              <div class="message_data">
+                <div class="title_box">
+                <%= link_to "ページ１", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ2", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ3", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ4", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ5", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+              </div>
+              </div> <%# //downbox// %>
+        </div> <%# //onebox// %>
+
+
+
+          <div class="one_box" >
+            <div class="upbox" style="background-image: url(http://www.jigsaw.jp/img/goods/L/epo7738954003.jpg);">
+            <div class="title">LESSON3<br>
+              テストカリキュラム
+              </div>
+              <div class="overlay">
+              </div>
+            </div>
+            <div class="downbox">
+              <div class="message_data">
+                <div class="title_box">
+                <%= link_to "ページ１", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ2", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ3", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ4", page_1_path, class: 'title' %>
+                   <span class="c-btn">未読</span> 
+                </div>
+
+                <div class="title_box">
+                <%= link_to "ページ5", page_1_path, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+              </div>
+              </div> <%# //downbox// %>
+        </div> <%# //onebox// %>
+
+
+
+<%# /////////////////////////////////////////////////////////////// %>
+
+
+    <div class="contents">
+        <% @curriculum.each do |c_list| %>
+          <div class="one_box" >
+            <div class="upbox" style="background-image: url(<%= c_list.image %>);">
+            <div class="title">LESSON<br>
+              <%= c_list.title %>
+              </div>
+              <div class="overlay">
+              </div>
+            </div>
+            <div class="downbox">
+              <div class="message_data">
+
+                <% if c_list.lesson1 !=""%>
+                <div class="title_box">
+                <%= link_to c_list.lesson1, c_list.url_1, class: 'title' %>
+                    <span class="c-btn">未読</span> 
+                </div>
+                <% end %>
+
+                <% if c_list.lesson2 != "" %>
+                <div class="title_box">
+                  <%= link_to c_list.lesson2, c_list.url_2, class: 'title' %>
+                  <span class="c-btn">未読</span> 
+                </div>
+                <% end %>
+
+                <% if c_list.lesson3 != "" %>
+                <div class="title_box">
+                <%= link_to c_list.lesson3, c_list.url_3, class: 'title' %>
+                <span class="c-btn">未読</span> 
+                </div>
+                <% end %>
+
+                <% if c_list.lesson4 != ""%>
+                <div class="title_box">
+                  <%= link_to c_list.lesson4, c_list.url_4, class: 'title' %>
+                <span class="c-btn">未読</span> 
+                </div>
+                <% end %>
+
+                <% if c_list.lesson5 != ""%>
+                <div class="title_box">
+                  <%= link_to c_list.lesson5, c_list.url_5, class: 'title' %>
+                <span class="c-btn">未読</span> 
+                </div>
+                <% end %>
+              </div>
+              <ul class="more_list">
+                <%# <% if user_signed_in? %>
+                <%# <% if bloglist.user_id == current_user.id %> 
+                <%# <p><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" width="10%" height="10%" class="github" ></p> %>
+                  <%# <p><img src='http://faaastaid.com/wp/wp-content/uploads/2019/09/inu.png' width="10%" height="10%" class="github" ></p> %>
+                <li class="edit">
+                    編集
+                    <%# <%= link_to '+ 編集', "/blog/#{bloglist.id}/edit", method: :get ,class: 'font'%> 
+                  </li>
+                <li class="delite">
+                    削除
+                    <%# <%= link_to '- 削除', "/blog/#{bloglist.id }", method: :delete ,class: 'font' %> 
+                  </li>
+              </ul>
+              </div> <%# //downbox// %>
+        </div> <%# //onebox// %>
+      <% end %>
+    </div> <%# //contents// %>
+</div> <%# //main???// %>
+</div><%# //main// %>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<div class="d-view">
+    <a class="d-title">
+      カリキュラム作成
+    </a>
+  <%= form_tag('/top', method: :post) do %>
+    <div class="field">
+    <input placeholder="カリキュラム名" type="text" name="title" class="n-btn" >
+    </div>
+
+    <div class="field">
+    <input placeholder="イメージ画像URL" type="text" name="image" class="n-btn" >
+    </div>
+
+
+  <div class="field">
+    <input placeholder="LESSON１" type="text" name="lesson1" class="n-btn" >
+    </div>
+
+      <div class="field-url">　L
+    <input placeholder="URL" type="text" name="url_1" class="url-btn" >
+    </div>
+
+    <div class="field">
+    <input placeholder="LESSON２" type="text" name="lesson2" class="n-btn" >
+    </div>
+
+      <div class="field-url">　L
+    <input placeholder="URL" type="text" name="url_2" class="url-btn" >
+    </div>
+
+      <div class="field">
+    <input placeholder="LESSON３" type="text" name="lesson3" class="n-btn" >
+    </div>
+
+      <div class="field-url">　L
+    <input placeholder="URL" type="text" name="url_3" class="url-btn" >
+    </div>
+
+      <div class="field">
+    <input placeholder="LESSON４" type="text" name="lesson4" class="n-btn" >
+    </div>
+
+       <div class="field-url">　L
+    <input placeholder="URL" type="text" name="url_4" class="url-btn" >
+    </div>
+
+      <div class="field">
+    <input placeholder="LESSON５" type="text" name="lesson5" class="n-btn" >
+    </div>
+
+      <div class="field-url">　L
+    <input placeholder="URL" type="text" name="url_5" class="url-btn" >
+    </div>
+    <%# <div class="field">
+      <textarea cols="50" name="text" placeholder="内容" rows="20" class="n-btn" ></textarea>
+      </div>  %>
+  <div class="actions">
+    <input type="submit" value="作成する" class="s-btn" >
+    </div>
+  <% end %>
+  <%# <p></p>
+  <a href="/">トップページへ戻る</a></li> %>
+</div>

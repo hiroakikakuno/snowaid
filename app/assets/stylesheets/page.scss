@@ -1,0 +1,128 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// テキストデコレーション //
+h1{
+  border-bottom: 2px solid #d65f4c;
+  padding-bottom: 10px;
+}
+
+.text{
+  color: #333;
+  line-height: 1.55;
+  letter-spacing: 0.1rem;
+  font-size: 18px;
+}
+.t2{
+  font-size: 23px;
+}
+.text-bold{
+  color: #333;
+  line-height: 1.55;
+  letter-spacing: 0.1rem;
+  font-size: 22px;
+  font-weight: bold;
+}
+.bold{
+  font-weight: bold;
+}
+.red{
+  color:red;
+}
+.blue{
+  color: rgb(0, 149, 238);
+}
+
+.image-box{
+  padding: 5px 10px;
+  display: inline-block;
+  text-align: center;
+  .image{
+    height: 350px;
+  }
+}
+
+.l-image{
+    width: 100%;
+}
+
+.blue-icon{
+  color: rgb(0, 149, 238);
+}
+.yellow-icon{
+  color: rgb(255, 217, 0);
+}
+.red-icon{
+  color: red;
+}
+
+// カリキュラムページCSS //
+
+.p-main{
+  &__contents{
+    width: 1200px;
+    height: 100vh;
+    padding-top:70px; 
+    margin: 0 auto;
+    &__titlebox{
+      background-size: cover;
+      padding: 20% 0;
+      margin: 15px;
+      height: 625px;
+      color: #fff;
+      text-align: center;
+      font-size: 35px;
+      font-family: "Hiragino Sans"; 
+      font-weight: 600;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0,0,0,0.9);
+      .subtitle{
+          font-size: 21px;
+        }
+      .submessage{
+        color: white;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+        max-width: 500px;
+        text-align: left;
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+    &__leftbox{
+      float: left;
+      width: 75%;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+      padding-bottom: 20px;
+      background: #fff;
+      padding-top: 10px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin: 15px;
+    }
+    ///// サイドバー /////
+    &__lightbox{
+      position: static;
+      float: left;
+      .lightbar{
+        height:500px;
+        width: 230px;
+        padding-bottom: 20px;
+        background: #fff;
+        padding-top: 10px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+        margin: 10px;
+      }
+      .is-fixed {
+        position: fixed;
+        top: 100px;
+        width: 230px;
+      }
+    }
+  }
+}

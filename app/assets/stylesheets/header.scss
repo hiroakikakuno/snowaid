@@ -1,0 +1,122 @@
+
+////////ドロップメニュー//////////////// 
+.pink{
+  position: relative;
+
+}
+
+li.pink p{
+  background-color: #e81c1c;
+  width: 78px;  
+  height: 70px;
+  color: white;              /* メニュー項目の文字色(白色) */
+  line-height: 70px;         /* メニュー項目のリンクの高さ(40px) */
+  text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+  text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+  display: block;            /* ★項目内全域をリンク可能にする */
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+///hoverのスピード調整/////
+  transition-property: color;
+	transition-duration: 1.0s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+
+}
+li.pink p:hover {
+  background-color: #ffdddd; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+  color: #EE5A66;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+
+ul.menu-list ul {
+  margin: 0px;        /* ★サブメニュー外側の余白(ゼロ) */
+  padding: 0px;       /* ★サブメニュー内側の余白(ゼロ) */
+  display: none;      /* ★標準では非表示にする */
+  position: absolute; /* ★絶対配置にする */
+}
+
+.drop-sub-menu a {
+  text-decoration: none; 
+  width: 200px;               /* サブメニュー1項目の横幅 */
+  height: 50px;
+  line-height: 50px;
+  background-color:white;
+  color: black;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+  border-radius: 1px;
+  display: block;
+///hoverのスピード調整/////
+  transition-property: color;
+	transition-duration: 0.4s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+}
+
+.drop-sub-menu:hover a{
+  background-color: #f8f8f8;; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+  color: #EE5A66;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+}
+
+/////////////////////////// 
+
+
+.hedder {
+position:fixed;
+top:0;
+z-index:100;
+width: 100vw;
+height: 70px;
+list-style: none;
+background: white;
+// font-weight: bold;
+display: inline-block;
+padding: 0 150px ;
+border-bottom: solid 1px #eeeeee;
+
+}
+.logo{
+color: white;
+margin-top: 12px;
+text-decoration: none;
+display: inline-block;
+}
+
+.countDownText {
+  color: #D65F4C;
+}
+
+.menu-list{
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  height: 100%;
+  float: right;
+  position: relative; 
+
+    li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+    padding-right: 12px;
+    }
+
+    .drop-menu{
+      background-color: #EE5A66;
+      height: 100%;
+      width: 78px;
+      line-height: 70px;
+    }
+
+    .drop-menu-btn{
+      text-decoration: none;
+    
+    }
+
+    .menu-btn{
+    color: #24292e; 
+    text-decoration: none;
+    }
+}

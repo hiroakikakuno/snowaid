@@ -1,0 +1,247 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+
+/////メインコンテンツ/////
+
+body {
+	background-color:#f8f8f8;		/*ページ全体の背景色*/
+}
+
+.main{
+  // padding-top: 70px;
+  margin: 70px 20px;
+}
+.contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.one_box{
+  margin: 20px ;
+  // margin: 25px auto;
+  width: 320px;
+  background: #FBFBFB;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  // display:inline-block;
+  .upbox{
+    // color: white;
+    padding: 50px 50px;
+    font-size: 14.4px;
+    height: 120px; 
+    width: 100%;
+    // background-size:contain;
+    background-size:cover;
+    // background-size:50% auto;
+    position: relative;
+    .title{
+      color:white;
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      padding-right: 70px;
+      z-index:10;
+    }
+
+    .overlay{
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.65) 100%);
+    }
+  }
+
+  .downbox{
+    height: 280px;
+    width: 100%;
+  }
+
+  .message_data{
+    padding: 0 1em;
+    .title_box{
+      border-bottom: 1px solid #d1d5da;
+      display: flex;
+      position: relative;
+    }
+    .title{
+      font-size: 13px;
+      font-weight: 750;
+      padding: 15px 0;
+      color: #24292e;
+      text-decoration: none;
+    }
+    .a-btn{
+      border: #62AF74 1px solid;
+      color: #ffffff;
+      background: #62AF74;
+      padding: .3em .8em .3em;
+      font-size: 67%;
+      min-width: 38px;
+      height: 20px;
+      position: absolute;
+      right: 25px;
+      top: 12px;
+    }
+    .b-btn{
+      border: #d65f4c 2px solid;
+      color: #d65f4c;
+      font-weight: bold;
+      padding: .3em .8em .3em;
+      font-size: 67%;
+      min-width: 38px;
+      height: 20px;
+      position: absolute;
+      right: 25px;
+      top: 12px;
+    }
+    .c-btn{
+      border: #ACACAC 1px solid;
+      color: #ACACAC;
+      font-weight: bold;
+      padding: .3em .8em .3em;
+      font-size: 67%;
+      min-width: 38px;
+      height: 20px;
+      position: absolute;
+      right: 25px;
+      top: 12px;
+    }
+  
+  }
+}
+
+.more_list{
+  list-style: none;
+  margin: 0;
+  display: flex;
+  float: right;
+  margin: 10px;
+    .github{
+      padding-top: 10px;
+      position: relative;
+      left: 510px;
+    }
+
+    .edit{
+      padding: 0.3em 1em;
+      // border: solid 1px #9941D8;
+      // display: inline-block;
+      // position: relative;
+      // left: 470px;
+      border-radius: 3px;
+      background: #d65f4c;
+      box-shadow: 0 3px 0 #c2412d;
+      color: #FBFBFB;//**とりあえず//
+      margin: 5px; 
+      font-size: 10px;
+      // float: right;
+    }
+
+    .delite{
+      padding: 0.3em 1em;
+      // border: solid 1px #9941D8;
+      display: inline-block;
+      // position: relative;
+      // left: 470px;
+      border-radius: 3px;
+      background: #d65f4c;
+      box-shadow: 0 3px 0 #c2412d;
+      color: #FBFBFB;//**とりあえず//
+      margin: 5px; 
+      font-size: 10px;
+    }
+
+    .font{
+      color: #fafbfc; 
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+}
+
+.footer{
+  position: fixed;
+  bottom: 40px;
+  width: 400px;
+  z-index: 100;
+}
+
+
+
+//////進捗管理ボタン//////////
+
+.endbox{
+  margin: 50px 0;
+  padding: 50px 0 30px;
+  border: 2px solid #F8E7E6;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  font-family: "Hiragino Sans";
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.read-field{
+  height: 200px;
+  display: flex;
+  padding-top: 20px ;
+  justify-content: center;
+  background-color: #F8F8F8;
+}
+
+.read-field-box{
+  
+  padding: 0px 25px;
+}
+
+.read-btn{
+  color: white;
+  height: 112px;
+  width: 112px;
+  font-size: 22px;
+  font-weight: bold;
+  background-size: contain;
+  border:none;
+  border-radius: 100px;
+  background: #68b764;
+  box-shadow: 0 4px 0 #477f44;
+  // background-image: url(readbtn.png);
+}
+
+.next-back{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  
+  .next-back-box{
+    margin: 40px 10px 0 10px ;
+    padding: 10px;
+    border: 3px solid #F8F8F8;
+
+  }
+  .btnlink{
+    text-decoration: none;
+     padding: 5px 8px;
+     color: #d65f4c;
+     font-size: 15px;
+  }
+}
+
+
+
+
+

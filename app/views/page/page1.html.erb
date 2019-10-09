@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%# 参照：view/layouts/application.html.erb %>
+</head>
+<body>
+<div class="p-main">
+  <div class="p-main__contents">
+    <div class="p-main__contents__titlebox" style="background-image: url(/assets/patrol.jpg);">
+      外傷処置の考え方
+      <p class="subtitle">〜リスクを冒さないために気をつけること〜</p>
+      <div class="submessage">
+      「フランス革命」は、18世紀後半（1789年〜1799年）フランスで起きた市民革命運動です。
+       この革命によって、王が絶対的権力を有した絶対君主制時代と、それまでの封建的体制が崩壊しました。
+      そしてこの革命によって、フランスが新たな近代国家体制を築いていくこととなった。
+      </div>
+    </div>
+
+    <div class="p-main__contents__leftbox">
+      <h1>大事なのは、とにかく基礎</h1>
+      <p class="text">
+      コーレス骨折・肩関節脱臼の処置など、難しいと思いますか？<br>
+      簡単というと語弊がありますが、処置自体は難しいものではありません。
+      なぜなら、処置の方法は確立されているからです。
+      特別な手技・難しい技など必要ありません。
+      外傷処置では、「当たり前のことを当たり前にする」ことが外傷に強くなる
+      正しい道です。</p>
+      <h1>基礎を徹底する</h1>
+      <p class="text">
+      結果的に基礎を徹底することがリスクベッジに繋がります。
+      基礎で対応できないような症例は、イレギュラーな症例と判断し病院へ送る。
+      難しい症例に手を出すほどリスクが高いものはありません。
+      </p>
+      <p class="text-bold">
+      <%= fa_icon 'check-square' ,class: "blue-icon"%>ゲレンデ外傷のほとんどが基礎スキルで対応可能
+      </p>
+      <p class="text-bold red">
+      <%= fa_icon 'exclamation-triangle' ,class: "yellow-icon"%>
+      基礎スキルで対応できないものはイレギュラーと判断し、救急対応を。
+      </p>
+
+      <div class="image-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/David_-_Napoleon_crossing_the_Alps_-_Malmaison1.jpg/540px-David_-_Napoleon_crossing_the_Alps_-_Malmaison1.jpg" class="image"  >
+      <br>ナポレオン・ボナパルト
+      </div>
+      <div class="image-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Vig%C3%A9e-Lebrun_Marie_Antoinette_1783.jpg/400px-Vig%C3%A9e-Lebrun_Marie_Antoinette_1783.jpg" class="image"  >
+      <br>マリー・アントワネット
+      </div>
+
+      <h1>現場で気をつけていること</h1>
+      <p class="t2 bold">
+      <a class="red">❶</a>柔道整復師の業務範囲を守る<br>
+      →骨折・脱臼は応急処置までというのを忘れない事<br>
+      <a class="red">❷</a>確定診断に固執しないこと<br>
+      →急性期では分からないことも多い。<br>
+      <a class="red">❸</a>基礎を徹底する・難しい事をしない<br>
+      →基礎から外れるものはイレギュラーと判断する<br>
+      <a class="red">❹</a>自分で全部なんとかしようと思わない<br>
+      →自分ができることをやる。出来ないことは医者に任せる。<br>
+      <a class="red">❺</a>深追いしない、引き際が肝心<br>
+      →整復を何度もトライしない。基礎通りやってもうまく行かない場合は何かある。
+      </p>
+      <img src="/assets/005.png" class="l-image"  >
+
+
+
+
+
+
+      <div class="endbox">
+        <h3>このカリキュラムの理解度を教えてください</h3>
+        <h4>ボタンを押していただくと次へ進めます</h4>
+
+<%# クリエイトボタン************** %>
+    <% if @page.nil? %> 
+        <div class="read-field">
+          <%= form_tag('/page/1', method: :post) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/1', method: :post) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+            <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/1', method: :post) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+
+<%# エディットボタン************** %>
+        <% else %>
+             <div class="read-field">
+          <%= form_tag('/page/1', method: :patch) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+              <%= form_tag('/page/1', method: :patch) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/1', method: :patch) do %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="1">
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+<%# BACK・NEXT・TOP ************** %>
+          <ul class="next-back">
+            <li class="next-back-box" ng-show="curriculum.previous_id" style="">
+              <a ng-click="go_previous()" class="btnlink">&lt;&lt;前のカリキュラム</a>
+            </li>
+            <li class="next-back-box" ng-show="curriculum.next_id">
+              <a ng-click="go_next()" class="btnlink" >次のカリキュラム&gt;&gt;</a>
+            </li>
+            <li ng-hide="curriculum.next_id" class="next-back-box">
+              <a href="/" class="btnlink" >TOPページへ戻る</a>
+            </li>
+          </ul>
+      </div>
+<%# サイドバー************** %>
+    </div>
+    <div class="p-main__contents__lightbox">
+      <div class="lightbar" >
+      </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Master</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%# <%= stylesheet_link_tag    'normalize.css', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+<header>
+  <div class="hedder">
+    <div class="logo">
+      <a href="/"><%= image_tag 'SNOWAIDiconyoko.png', size: '141x22' ,class: "logo"  %></a>
+    </div> <%#"logo"のend %>
+    
+    <% if user_signed_in? %>
+      <ul class="menu-list">
+        <li><div class="countDown">終了まで
+          <span class="countDownText">
+            <script language="JavaScript">
+              var now = new Date();
+              var point = new Date("<%= current_user.created_at.strftime('%Y/%m/%d') %> " ) ;
+                  point.setMonth(point.getMonth() + 3);
+              var countdown = Math.ceil((point.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown >= 0) {
+                document.write(countdown);
+              } 
+            </script>
+          </span>日</div>
+        </li>
+        <%# <li><%= link_to "ログアウト　", destroy_user_session_path, method: :delete ,class: 'menu-btn'</li> %>
+        <li class="pink"><p>メニュー ▼</p>
+            <ul>
+              <li class="drop-sub-menu"><%= link_to "作成", top_new_path, class: 'drop-menu-btn' %></li>
+              <li  class="drop-sub-menu"><a href="https://tech-camp.in/expert/faq">FAQ</a></li>
+              <li  class="drop-sub-menu"><%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: 'menu-btn' %></li>
+            </ul>
+      </li>
+      <li>ID : <%= current_user.id %>　<%= current_user.nickname %>  さん</li>
+      </ul>
+        
+        <% else %>
+      <ul class="menu-list">
+        <li><%= link_to "ログイン", new_user_session_path,class: 'menu-btn'  %></li>
+        <li><%= link_to "新規登録", new_user_registration_path,class: 'menu-btn'  %></li>
+      </ul>
+  <% end %>
+
+
+       </div> <%#"hedder"のend %>
+  </header>
+
+    <%= yield %>
+
+<footer class ="footer">
+
+</footer>
+
+  </body>
+</html>
+

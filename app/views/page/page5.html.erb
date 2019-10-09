@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%# 参照：view/layouts/application.html.erb %>
+</head>
+<body>
+<div class="p-main">
+  <div class="p-contents">
+    <div class="titlebox" style="background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s093251349da78e77/image/i318d963305f28a7d/version/1505260421/image.jpg);">
+    パブロ・ピカソ
+    <p class="subtitle">〜キュビスムの創始者〜</p>
+      <div class="submessage">
+        フィンセント・ヴィレム・ファン・ゴッホは、オランダのポスト印象派の画家。
+        主要作品の多くは1886年以降のフランス居住時代、特にアルル時代（1888年 - 1889年5月）とサン＝レミでの療養時代（1889年5月 - 1890年5月）に制作された。
+        感情の率直な表現、大胆な色使いで知られ、ポスト印象派を代表する画家である。フォーヴィスムやドイツ表現主義など、20世紀の美術にも大きな影響を及ぼした。
+      </div>
+    </div>
+    <div class="leftbox">
+
+      <h1>パブロ・ピカソ</h1>
+      <p class="text">パブロ・ピカソ[3]（Pablo Picasso [ˈpaβlo piˈkaso], 1881年10月25日 - 1973年4月8日）は、スペインのマラガに生まれ、フランスで制作活動をした画家、素描家、彫刻家。
+      ジョルジュ・ブラックとともに、キュビスムの創始者として知られる。生涯におよそ1万3500点の油絵と素描、10万点の版画、3万4000点の挿絵、300点の彫刻と陶器を制作し、最も多作な美術家であると『ギネスブック』に記されている。
+      </p>
+      <h1>『泣く女』</h1>
+      <p class="text">
+      『泣く女』（なくおんな）は、パブロ・ピカソが1937年に描いた絵画作品。ピカソが写真家であり絵も描いた愛人ドラ・マール（本名、アンリエット・テオドラ・マルコヴィッチ）をモデルにした、有名な作品の一つ。
+      ドラ・マールをモデルに描かれた作品には『ドラ・マールの肖像』など油彩に限らず他にもあるが、最もよく知られるのはこの「泣く女」である。ただし「泣く女」をモチーフとした作品には100種類以上のバリエーションがあるといわれる。
+      </p>
+      <div class="image-box">
+      <img src="http://blog-imgs-49.fc2.com/k/u/w/kuw0703/20141112202331759.jpg" class="image"  >
+      <br>「泣く女」
+      </div>
+      <div class="image-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/460px-Pablo_picasso_1.jpg" class="image"  >
+      <br>パブロ・ピカソ
+      </div>
+
+      <div class="endbox">
+        <h3>このカリキュラムの理解度を教えてください</h3>
+        <h4>ボタンを押していただくと次へ進めます</h4>
+
+<%# //////////////////////////////////////////////////////////////%>
+    <% if @page.nil? %>
+        <div class="read-field">
+          <%= form_tag('/page/5', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="5">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+              <%= form_tag('/page/5', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="5">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/5', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="5">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+
+<%# //////////////////////////////////////////////////////////////%>
+        <% else %>
+             <div class="read-field">
+          <%= form_tag('/page/5', method: :patch) do %><%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="5"><%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+              <%= form_tag('/page/5', method: :patch) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="5">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/5', method: :patch) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="5">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+<%# //////////////////////////////////////////////////////////////%>
+
+
+              <ul class="next-back">
+            <li class="next-back-box" ng-show="curriculum.previous_id" style="">
+              <a ng-click="go_previous()" class="btnlink">&lt;&lt;前のカリキュラム</a>
+            </li>
+            <li class="next-back-box" ng-show="curriculum.next_id">
+              <a ng-click="go_next()" class="btnlink" >次のカリキュラム&gt;&gt;</a>
+            </li>
+            <li ng-hide="curriculum.next_id" class="next-back-box">
+              <a href="/" class="btnlink" >TOPページへ戻る</a>
+            </li>
+          </ul>
+
+      </div>
+    </div>
+    
+<%# //////サイドバー//////%>
+    <div class="lightbox">
+      <div class="lightbar">
+      </div>
+    </div>
+</div>
+</body>
+</html>
