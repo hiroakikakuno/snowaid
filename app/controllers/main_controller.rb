@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   before_action :authenticate_user!
 
- def top 
+ def index 
   @curriculum = Curriculum.all
   @page = Page.all
  end
