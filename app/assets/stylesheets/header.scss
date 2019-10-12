@@ -2,7 +2,7 @@
 ////////ドロップメニュー//////////////// 
 .pink{
   position: relative;
-
+  z-index:110;
 }
 
 li.pink p{
@@ -65,7 +65,7 @@ ul.menu-list ul {
 .hedder {
 // position:fixed;
 // top:0;
-z-index:100;
+z-index:110;
 width: 100vw;
 height: 70px;
 list-style: none;

@@ -63,7 +63,7 @@ h1{
   &__contents{
     width: 1200px;
     height: 100vh;
-    padding-top:70px; 
+    // padding-top:70px;  //ヘッダー固定時はON
     margin: 0 auto;
     &__titlebox{
       background-size: cover;
