@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%# 参照：view/layouts/application.html.erb %>
+</head>
+<body>
+<div class="p-main">
+  <div class="p-contents">
+    <div class="titlebox" style="background-image: url(https://images.france.fr/zeaejvyq9bhj/1dsg5Z235AM8yRwJIjwY5v/1274829002626fdace5c1c3cfc2a87b1/Van_Gogh__la_nuit___toil__e____Culturespaces_-_Gianfranco_Iannuzzi_-_Bridgeman_Images.jpg?w=1120&h=490&q=70&fm=webp&fit=fill);">
+    フィンセント・ファン・ゴッホ
+    <p class="subtitle">〜オランダのポスト印象派の画家〜</p>
+      <div class="submessage">
+        フィンセント・ヴィレム・ファン・ゴッホは、オランダのポスト印象派の画家。
+        主要作品の多くは1886年以降のフランス居住時代、特にアルル時代（1888年 - 1889年5月）とサン＝レミでの療養時代（1889年5月 - 1890年5月）に制作された。
+        感情の率直な表現、大胆な色使いで知られ、ポスト印象派を代表する画家である。フォーヴィスムやドイツ表現主義など、20世紀の美術にも大きな影響を及ぼした。
+      </div>
+    </div>
+    <div class="leftbox">
+    
+      <h1>ひまわり (絵画)</h1>
+      <p class="text">1888年8月から1890年1月にかけてフィンセント・ファン・ゴッホによって描かれた、花瓶に活けられた向日葵をモチーフとする複数の絵画の名称である。
+      ファン・ゴッホにとっての向日葵は明るい南フランス（南仏）の太陽、ひいてはユートピアの象徴であったと言われている。 南仏のアルル滞在時に盛んに描いた向日葵を、精神が破綻して精神病院での療養が始まってからは描いていないこともその根拠とされる。
+      </p>
+      <h1>作品群としての『ひまわり』とその点数について</h1>
+      <p class="text">「ファン・ゴッホの制作した「花瓶に挿された向日葵をモチーフとした油彩の絵画」という定義であれば、7点が制作されたことが広く認められている。このうち6点が現存している。
+      この他に、パリにおいて制作されたものを含めて合計で11点（または12点）とする定義があるが、これは花瓶に挿されていない構図も含めている。この項では主に前者の「花瓶に挿された向日葵」というほぼ同様の構図をとる作品群について述べる。
+      同様の構図の作品が複数ある理由については、アルルでの生活・制作の拠点であった「黄色い家」の部屋を飾るためであったとする説がある。
+      ファン・ゴッホは、『ルーラン夫人ゆりかごを揺らす女」』という作品を中央にして、『ひまわり』（ミュンヘン、ロンドン、アムステルダム、東京にある4点）の何れか2点を両側に展示するというアイデアを手紙に記している。従って、これらの作品群は習作、不出来のもののやり直しというよりは、やはり複数が揃っていることに意味があったものと思われる。これは2003年に損保ジャパン東郷青児美術館（現・東郷青児記念 損保ジャパン日本興亜美術館）の企画展で実現した。
+      </p>
+      <div class="image-box">
+      <img src="https://www.sjnk-museum.org/wp/wp-content/uploads/2014/07/himawari.png" class="image"  >
+      <br>ひまわり
+      </div>
+      <div class="image-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/VanGogh_1887_Selbstbildnis.jpg/500px-VanGogh_1887_Selbstbildnis.jpg" class="image"  >
+      <br>フィンセント・ファン・ゴッホ
+      </div>
+
+      <h1>後期ひまわりシリーズ</h1>
+      <p class="text">後期のひまわりシリーズは、1888年にアルル滞在時に制作さされたものである。1888年2月にゴッホはアルルに移住する。同年10月にゴーギャンもアルルにやってくる。パリ時代からゴーギャンとの共同アトリエを望んでいたゴッホは、二人が利用する予定の黄色い家のインテリア絵画として「ひまわり」を描いた。
+      これが後期の花瓶に活けられたひまわりシリーズである。このシリーズは、ゴーギャンを歓迎するゴッホの気持ちがあふれており、ゴッホ作品では非常に珍しい明るい作品である。東京の東郷青児記念 損保ジャパン日本興亜美術館が所蔵しているひまわりは、このシリーズの7点のうちの１つである。
+      なお、ユートピアに満ちたゴーギャンとの共同生活は、たった2ヶ月で仲違いして破綻した。
+      </p>
+      <div class="endbox">
+        <h3>このカリキュラムの理解度を教えてください</h3>
+        <h4>ボタンを押していただくと次へ進めます</h4>
+
+<%# //////////////////////////////////////////////////////////////%>
+    <% if @page.nil? %>
+        <div class="read-field">
+          <%= form_tag('/page/2', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="2">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+              <%= form_tag('/page/2', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="2">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/2', method: :post) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="2">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+
+<%# //////////////////////////////////////////////////////////////%>
+        <% else %>
+             <div class="read-field">
+          <%= form_tag('/page/2', method: :patch) do %><%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="2"><%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="0" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="0%" class="read-btn" >
+            </div>
+          <% end %>
+
+              <%= form_tag('/page/2', method: :patch) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="" value="2">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="" value="50" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="50%" class="read-btn" >
+            </div>
+          <% end %>
+
+            <%= form_tag('/page/2', method: :patch) do %>  <%# !編集! %>
+            <div class="field">
+            <input placeholder="page" type="hidden" name="page" class="n-btn" value="2">  <%# !編集! %>
+            </div>
+            <div class="field">
+            <input placeholder="read_log" type="hidden" name="read_log" class="n-btn" value="100" >
+            </div>
+              <div class="read-field-box">
+            <input type="submit" value="100%" class="read-btn" >
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+<%# //////////////////////////////////////////////////////////////%>
+
+
+              <ul class="next-back">
+            <li class="next-back-box" ng-show="curriculum.previous_id" style="">
+              <a ng-click="go_previous()" class="btnlink">&lt;&lt;前のカリキュラム</a>
+            </li>
+            <li class="next-back-box" ng-show="curriculum.next_id">
+              <a ng-click="go_next()" class="btnlink" >次のカリキュラム&gt;&gt;</a>
+            </li>
+            <li ng-hide="curriculum.next_id" class="next-back-box">
+              <a href="/" class="btnlink" >TOPページへ戻る</a>
+            </li>
+          </ul>
+
+      </div>
+    </div>
+    
+<%# //////サイドバー//////%>
+    <div class="lightbox">
+      <div class="lightbar">
+      </div>
+    </div>
+</div>
+</body>
+</html>
